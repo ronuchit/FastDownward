@@ -29,7 +29,7 @@ class SuccessorGeneratorFactory {
 public:
     explicit SuccessorGeneratorFactory(const TaskProxy &task_proxy);
     // Destructor cannot be implicit because OperatorInfo is forward-declared.
-    ~SuccessorGeneratorFactory();
+    virtual ~SuccessorGeneratorFactory();
     GeneratorPtr create();
 };
 }

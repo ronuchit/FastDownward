@@ -20,6 +20,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const = 0;
+    virtual ~GeneratorBase() = default;
 };
 
 class GeneratorForkBinary : public GeneratorBase {
@@ -34,6 +35,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const override;
+    virtual ~GeneratorForkBinary() = default;
 };
 
 class GeneratorForkMulti : public GeneratorBase {
@@ -45,6 +47,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const override;
+    virtual ~GeneratorForkMulti() = default;
 };
 
 class GeneratorSwitchVector : public GeneratorBase {
@@ -59,6 +62,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const override;
+    virtual ~GeneratorSwitchVector() = default;
 };
 
 class GeneratorSwitchHash : public GeneratorBase {
@@ -73,6 +77,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const override;
+    virtual ~GeneratorSwitchHash() = default;
 };
 
 class GeneratorSwitchSingle : public GeneratorBase {
@@ -88,6 +93,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const override;
+    virtual ~GeneratorSwitchSingle() = default;
 };
 
 class GeneratorLeafVector : public GeneratorBase {
@@ -99,6 +105,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const override;
+    virtual ~GeneratorLeafVector() = default;
 };
 
 class GeneratorLeafSingle : public GeneratorBase {
@@ -110,6 +117,7 @@ public:
     // Transitional method, used until the search is switched to the new task interface.
     virtual void generate_applicable_ops(
         const GlobalState &state, std::vector<OperatorID> &applicable_ops) const override;
+    virtual ~GeneratorLeafSingle() = default;
 };
 }
 
