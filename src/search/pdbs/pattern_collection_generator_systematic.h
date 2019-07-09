@@ -26,7 +26,7 @@ class CanonicalPDBsHeuristic;
 
 // Invariant: patterns are always sorted.
 class PatternCollectionGeneratorSystematic : public PatternCollectionGenerator {
-    using PatternSet = std::unordered_set<Pattern>;
+    using PatternSet = utils::HashSet<Pattern>;
 
     const size_t max_pattern_size;
     const bool only_interesting_patterns;
@@ -47,6 +47,7 @@ class PatternCollectionGeneratorSystematic : public PatternCollectionGenerator {
 public:
     explicit PatternCollectionGeneratorSystematic(const options::Options &opts);
     virtual ~PatternCollectionGeneratorSystematic() = default;
+
 
     virtual PatternCollectionInformation generate(
         const std::shared_ptr<AbstractTask> &task) override;
