@@ -22,7 +22,7 @@ public:
       here because GeneratorBase is a forward declaration and the
       incomplete type cannot be destroyed.
     */
-    ~SuccessorGenerator();
+    virtual ~SuccessorGenerator();
 
     void generate_applicable_ops(
         const State &state, std::vector<OperatorID> &applicable_ops) const;

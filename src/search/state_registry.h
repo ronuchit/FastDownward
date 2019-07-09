@@ -231,14 +231,14 @@ public:
           to reduce boilerplate. Supported compilers may complain about
           this, in which case we will add the missing methods.
         */
-
+    public:
         friend class StateRegistry;
         const StateRegistry &registry;
         StateID pos;
 
         const_iterator(const StateRegistry &registry, size_t start)
             : registry(registry), pos(start) {}
-public:
+
         const_iterator &operator++() {
             ++pos.value;
             return *this;

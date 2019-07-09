@@ -39,6 +39,7 @@ public:
         const std::shared_ptr<AbstractTask> task,
         std::vector<lp::LPConstraint> &constraints,
         double infinity);
+    virtual ~ConstraintGenerator() = default;
 
     /*
       Called before evaluating a state. Use this to add temporary constraints
